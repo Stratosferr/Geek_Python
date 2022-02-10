@@ -3,8 +3,8 @@ def fact(n):
     fact = 1
     for i in f:
         fact *= i
-        yield fact
+        yield i, fact
 
 
-for j in fact(int(input('Введите N: '))):
-    print(j)
+for num,j in fact(int(input('Введите N: '))):
+    print(f'{num}!={j}')
